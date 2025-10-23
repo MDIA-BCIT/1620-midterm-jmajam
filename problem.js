@@ -28,6 +28,10 @@ function checkPassword(password, userInput) {
     } else if (userInput !== password) {
         console.log("Access Denied!");
     }
+
+    if (password.length < 5) {
+        console.log("Your password is too short!");
+    }
 }
 
 console.log(
@@ -49,3 +53,7 @@ checkPassword("notForgot", "forgot");
 
 console.log("testing rest when the password isnt reset");
 checkPassword("notReset", "reset");
+
+console.log("testing if password is less than 5 characters");
+checkPassword("less", "less");
+checkPassword("le", "le2");
