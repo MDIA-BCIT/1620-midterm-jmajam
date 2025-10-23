@@ -51,7 +51,7 @@ checkPassword("test4", "test5");
 console.log("testing forgot when the password isnt forgot");
 checkPassword("notForgot", "forgot");
 
-console.log("testing rest when the password isnt reset");
+console.log("testing reset when the password isnt reset");
 checkPassword("notReset", "reset");
 
 console.log("testing if password is less than 5 characters");
