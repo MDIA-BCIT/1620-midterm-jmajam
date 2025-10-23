@@ -14,21 +14,25 @@ CHALLENGE
 */
 
 function checkPassword(password, userInput) {
+    // checks if the input matches with password
     if (userInput === password) {
         console.log("Access Granted!");
+        //checks if the password is forgot or reset
         if (password === "forgot" || password === "reset") {
             console.log(
                 "This password you set should not be used because it glitches the system"
             );
         }
+        //handles logic for userInputs: forgot and reset when the password is neither
     } else if (userInput === "forgot") {
         console.log("Here is a hint");
     } else if (userInput === "reset") {
         console.log("Let's reset your account");
+        //handles incorrect userInput
     } else if (userInput !== password) {
         console.log("Access Denied!");
     }
-
+    //checks the length of the password
     if (password.length < 5) {
         console.log("Your password is too short!");
     }
